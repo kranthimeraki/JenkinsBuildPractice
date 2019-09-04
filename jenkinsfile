@@ -1,9 +1,9 @@
-node('UBUNTU'){
+node{
     stage('GIT') {
        git 'https://github.com/kranthimeraki/JenkinsBuildPractice.git'
     }
     stage('package') {
        sh 'mvn package'
     }
-
+    
 }
