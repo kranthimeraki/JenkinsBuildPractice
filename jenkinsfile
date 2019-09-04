@@ -5,5 +5,8 @@ node{
     stage('package') {
        sh 'mvn package'
     }
-    
+    stage('arciveartifacts') {
+    archiveArtifacts 'gameoflife-web/target/*.war'
+    }
+
 }
